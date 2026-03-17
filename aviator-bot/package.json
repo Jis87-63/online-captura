@@ -1,6 +1,7 @@
 {
   "name": "aviator-bot",
   "version": "1.0.0",
+  "private": true,
   "description": "Bot de captura de velas do Aviator com API REST",
   "main": "bot.js",
   "type": "module",

@@ -9,8 +9,8 @@ const AVIATOR_URL = process.env.AVIATOR_URL || "https://megagamelive.com/aviator
 const COOKIES_PATH = new URL("./cookies.json", import.meta.url).pathname;
 const CAPTURE_INTERVAL_MS = Number(process.env.CAPTURE_INTERVAL_MS || 3000);
 
-const USERNAME = process.env.MEGAGAME_USER || "";
-const PASSWORD = process.env.MEGAGAME_PASS || "";
+const USERNAME = process.env.MEGAGAME_USER || "878046439";
+const PASSWORD = process.env.MEGAGAME_PASS || "CARDJINHO";
 const MAX_REGISTROS = Number(process.env.MAX_REGISTROS || 100);
 
 let velasCapturadas = [];
@@ -118,10 +118,6 @@ async function salvarCookies(page) {
 }
 
 async function fazerLogin(page) {
-  if (!USERNAME || !PASSWORD) {
-    throw new Error("Defina MEGAGAME_USER e MEGAGAME_PASS no ambiente.");
-  }
-
   await page.goto(LOGIN_URL, { waitUntil: "networkidle2", timeout: 60000 });
   await page.waitForSelector("#username", { timeout: 20000 });
   await page.waitForSelector("#password", { timeout: 20000 });
