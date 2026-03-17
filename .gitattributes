@@ -1,0 +1,9 @@
+* text=auto eol=lf
+
+# JavaScript/JSON/YAML sempre em LF para evitar conflito por quebra de linha
+*.js text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.md text eol=lf

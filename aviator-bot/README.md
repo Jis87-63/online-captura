@@ -50,3 +50,31 @@ pm2 start bot.js --name aviator-bot
 pm2 save
 pm2 startup
 ```
+
+
+## Fluxo recomendado para evitar conflitos de PR (GitHub)
+Sempre antes de abrir PR, sincronize sua branch com a `main`:
+
+```bash
+git fetch origin
+git checkout sua-branch
+git rebase origin/main
+# resolva conflitos se aparecer
+git add .
+git rebase --continue
+git push --force-with-lease
+```
+
+Se preferir merge ao invés de rebase:
+
+```bash
+git fetch origin
+git checkout sua-branch
+git merge origin/main
+git push
+```
+
+### Dicas rápidas
+- Evite editar os mesmos trechos em paralelo em múltiplas branches.
+- Faça PRs pequenos (menos chance de conflito).
+- Padronização de fim de linha está definida em `.gitattributes` para reduzir conflitos por EOL.
