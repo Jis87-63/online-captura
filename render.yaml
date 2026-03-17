@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: aviator-bot
+    runtime: node
+    rootDir: aviator-bot
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: HEADLESS
+        value: "true"
+      - key: MAX_REGISTROS
+        value: "100"
+      - key: CAPTURE_INTERVAL_MS
+        value: "3000"
+      - key: MEGAGAME_USER
+        sync: false
+      - key: MEGAGAME_PASS
+        sync: false
