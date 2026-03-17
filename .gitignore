@@ -1,4 +1,5 @@
-aviator-bot/.env
-aviator-bot/cookies.json
+# Runtime/local artifacts (não versionar)
 aviator-bot/node_modules/
+aviator-bot/cookies.json
 aviator-bot/package-lock.json
+aviator-bot/.env
